@@ -5,5 +5,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the calculate_it index. Yay!")
+def persons(request):
+	return render(request, 'calculate_it/persons.html', {})
+    # return HttpResponse("Hello, world. This is the persons view. Yay!")
