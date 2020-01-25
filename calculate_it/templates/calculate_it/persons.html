@@ -6,13 +6,17 @@
         <div>
             <h1>A nice collection of Persons</h1>
         </div>
-
+        <div>
+        	<h2>Registered persons:</h2>
+        	{% for person in persons %}
+	        	<li>{{ person }}</li>
+        	{% endfor %}
+        </div>
         <div>
             <h2><a href="">My first person</a></h2>
             <p>Person 1</p>
             <p>registered: 14.01.2020, 21:10</p>
         </div>
-
         <div>
             <h2><a href="">My second person</a></h2>
             <p>Person 2.</p>
