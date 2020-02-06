@@ -1,26 +1,22 @@
+{% load static %}
+
 <html>
     <head>
         <title>A nice collection of Persons</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/persons.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div>
+        <div class="page-header">
             <h1>A nice collection of Persons</h1>
         </div>
-        <div>
-        	<h2>Registered persons:</h2>
+        <div class="persons-list">
+        	<h3>Registered persons:</h3>
         	{% for person in persons %}
 	        	<li>{{ person }}</li>
         	{% endfor %}
-        </div>
-        <div>
-            <h2><a href="">My first person</a></h2>
-            <p>Person 1</p>
-            <p>registered: 14.01.2020, 21:10</p>
-        </div>
-        <div>
-            <h2><a href="">My second person</a></h2>
-            <p>Person 2.</p>
-            <p>registered: 14.01.2020, 21:14</p>
         </div>
     </body>
 </html>
