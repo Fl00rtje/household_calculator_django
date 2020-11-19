@@ -3,7 +3,6 @@ MY_VIRTUAL_ENV = household_calculator_2020
 TCPPORT=8000
 RUNSERVER=python manage.py runserver 0.0.0.0:${TCPPORT}
 
-#-run:	start server :${TCPPORT} in the background and sleep 3
 run:	virtualenv
 		${RUNSERVER}
 
