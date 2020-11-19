@@ -1,4 +1,4 @@
-MY_VIRTUAL_ENV = household_calculator_2019
+MY_VIRTUAL_ENV = household_calculator_2020
 
 TCPPORT=8000
 RUNSERVER=python manage.py runserver 0.0.0.0:${TCPPORT}
