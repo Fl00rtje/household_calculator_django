@@ -1,6 +1,7 @@
 # ignore the database
 *.sqlite3
 
+# ignore migrations and pycache
 calculate_it/migrations
 calculate_it/__pycache__
 household_calculator/__pycache__

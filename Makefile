@@ -3,6 +3,10 @@ MY_VIRTUAL_ENV = household_calculator_2020
 TCPPORT=8000
 RUNSERVER=python manage.py runserver 0.0.0.0:${TCPPORT}
 
+domigrate: virtualenv
+	python manage.py makemigrations
+	python manage.py migrate
+
 run:	virtualenv
 		${RUNSERVER}
 
