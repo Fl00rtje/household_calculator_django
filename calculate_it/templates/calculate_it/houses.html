@@ -1,0 +1,10 @@
+{% extends 'calculate_it/base.html' %}
+
+{% block content %}
+    <div>
+        <h3>Houses:</h3>
+        {% for house in houses %}
+            <li>{{ house }}</li>
+        {% endfor %}
+    </div>
+{% endblock %}

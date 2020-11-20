@@ -7,3 +7,11 @@ class Person(models.Model):
 
 	def __str__(self):
 		return f"{self.first_name} {self.last_name}"
+
+class House(models.Model):
+	rent = models.IntegerField(null=True)
+	servicecosts = models.IntegerField(null=True)
+	total_rent = models.IntegerField(null=True)
+	gas = models.IntegerField(null=True)
+	electricity = models.IntegerField(null=True)
+	

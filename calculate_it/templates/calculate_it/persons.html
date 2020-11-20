@@ -1,6 +1,7 @@
 {% extends 'calculate_it/base.html' %}
 
 {% block content %}
+    <a href="{% url 'person_new' %}" >Add Person</a>
     <div class="persons-list">
         <h3>Registered persons:</h3>
         {% for person in persons %}
