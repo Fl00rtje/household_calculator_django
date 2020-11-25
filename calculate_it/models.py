@@ -14,4 +14,7 @@ class House(models.Model):
 	total_rent = models.IntegerField(null=True)
 	gas = models.IntegerField(null=True)
 	electricity = models.IntegerField(null=True)
+
+	def __str__(self):
+		return f"House {self.id}"
 	

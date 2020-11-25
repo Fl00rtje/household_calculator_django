@@ -1,9 +1,7 @@
 from django.shortcuts import render
-
-# Create your views here.
-
 from django.http import HttpResponse
 from django.shortcuts import redirect
+
 from .models import Person, House
 from .forms import PersonForm, HouseForm
 
@@ -33,7 +31,7 @@ def house(request):
         if form.is_valid():
             house = form.save(commit=False)
             house.save()
-            return redirect('/home', pk=house.pk)
+            return redirect('/house', pk=house.pk)
     else:
         form = HouseForm()
     return render(request, 'calculate_it/house.html', {'houses': houses, 'form': form})
