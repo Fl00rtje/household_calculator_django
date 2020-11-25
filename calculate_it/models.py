@@ -16,5 +16,5 @@ class House(models.Model):
 	electricity = models.IntegerField(null=True)
 
 	def __str__(self):
-		return f"House {self.id}"
+		return f"House {self.id}: Rent = {self.rent}, Servicecosts = {self.servicecosts}"
 	

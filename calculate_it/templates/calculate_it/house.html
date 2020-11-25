@@ -1,10 +1,6 @@
 {% extends 'calculate_it/base.html' %}
 
 {% block content %}
-    <h3>Housing costs</h3>
+    <h3>Summary of your costs:</h3>
     <br>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
 {% endblock %}
