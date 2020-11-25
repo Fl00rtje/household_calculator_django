@@ -24,7 +24,7 @@ def person_new(request):
         form = PersonForm()
     return render(request, 'calculate_it/person_new.html', {'form': form})
 
-def house(request):
+def house_new(request):
     if request.method == "POST":
         form = HouseForm(request.POST)
         if form.is_valid():
@@ -33,8 +33,13 @@ def house(request):
             return redirect('/house', pk=house.pk)
     else:
         form = HouseForm()
-    return render(request, 'calculate_it/house.html', {'house': house, 'form': form})
+    return render(request, 'calculate_it/house_new.html', {'form': form})
 
 def houses(request):
     houses = House.objects.all()
     return render(request, 'calculate_it/houses.html', {'houses': houses})
+
+def house(request):
+    return render(request, 'calculate_it/house.html')
+
+
