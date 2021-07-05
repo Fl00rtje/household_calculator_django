@@ -9,8 +9,8 @@ class PersonForm(forms.ModelForm):
 		model = Person
 		fields = ('first_name', 'last_name',)
 
-class HouseForm(forms.ModelForm):
 
+class HouseForm(forms.ModelForm):
 	class Meta:
 		model = House
 		fields = ('rent', 'servicecosts', 'gas', 'electricity')

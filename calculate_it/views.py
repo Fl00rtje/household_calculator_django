@@ -7,11 +7,13 @@ from .forms import PersonForm, HouseForm
 
 
 def home(request):
-    return render(request, 'calculate_it/base.html')
+    return render(request, 'calculate_it/dashboard.html')
+
 
 def persons(request):
 	persons = Person.objects.all()
 	return render(request, 'calculate_it/persons.html', {'persons': persons})
+
 
 def person_new(request):
     if request.method == "POST":

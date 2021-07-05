@@ -2,37 +2,19 @@
 
 <html>
     <head>
-        <title>Household Caculator</title>
+        <title>Household Calculator</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.freeimages.com/images/large-previews/54a/numbers-1195675.jpg);">
-            <div class="container">
-                <h1>Calculate it!</h1>
-                <p>Never lost in calculating your expenses anymore.</p>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
-                <a href="{% url 'house_new' %}">House</a>
-            </div>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)">
-                Car
-            </div>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
-                Public Transportation
-            </div>
-        </div>
-
-
+        {% include 'calculate_it/header.html' %}
+        {% block content %}
+        {% endblock %}
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
                 </div>
             </div>
         </div>

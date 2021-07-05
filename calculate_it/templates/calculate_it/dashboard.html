@@ -1,0 +1,16 @@
+{% extends 'calculate_it/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
+        <a href="{% url 'house_new' %}">House</a>
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)">
+        Car
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
+        Public Transportation
+    </div>
+</div>
+{% endblock content %}
