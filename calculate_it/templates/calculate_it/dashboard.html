@@ -2,15 +2,27 @@
 {% load static %}
 
 {% block content %}
-<div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
-        <a href="{% url 'house_new' %}">House</a>
+
+{% if user.is_authenticated %}
+    <div class="cards">
+        <a href="{% url 'house_new' %}" style="text-decoration:none">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
+                House
+            </div>
+        </a>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)" >
+            Car
+        </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
+            Public Transportation
+        </div>
+        <a href="{% url 'logout'%}">Click here to logout.</a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)">
-        Car
+{% else %}
+    <div class="form">
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
-        Public Transportation
-    </div>
-</div>
+{% endif %}
+
 {% endblock content %}

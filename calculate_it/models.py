@@ -11,6 +11,7 @@ class Person(models.Model):
 
 
 class House(models.Model):
+	# person = models.ForeignKey(Person, null=True, on_delete=models.CASCADE)
 	rent = models.IntegerField(null=True)
 	servicecosts = models.IntegerField(null=True)
 	total_rent = models.IntegerField(null=True)

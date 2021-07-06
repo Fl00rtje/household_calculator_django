@@ -1,10 +1,13 @@
 {% extends 'calculate_it/base.html' %}
-
+{% load static %}
 {% block content %}
+
+<div class="form">
     <h3>Housing costs</h3>
     <br>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
+</div>
 {% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'calculate_it/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form">
+  <p>Logged out!</p>
+  <a href="{% url 'login'%}">Click here to login again.</a>
+<div>
+
+{% endblock %}

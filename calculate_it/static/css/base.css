@@ -41,6 +41,9 @@
   grid-gap: 16px;
 }
 
-a:link {
-    text-decoration: none;
+.form {
+    padding-left: 140px;
+    padding-top: 50px;
 }
+
+
