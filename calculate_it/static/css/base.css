@@ -46,4 +46,8 @@
     padding-top: 50px;
 }
 
+..card-category cards a:link {
+    color: white;
+}
+
 

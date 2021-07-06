@@ -3,26 +3,27 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
-    <div class="cards">
-        <a href="{% url 'house_new' %}" style="text-decoration:none">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
-                House
-            </div>
+<div class="form">
+    <h1>Welcome {{first_name}}</h1>
+</div>
+
+<div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/abc/houses-in-amsterdam-1401431.jpg)">
+        <a href="{% url 'house_new' %}" style="color:white;text-decoration:none">
+            House
         </a>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)" >
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/48a/oldtimer-6-1449463.jpg)" >
+        <a href="" style="color:white;text-decoration:none">
             Car
-        </div>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
-            Public Transportation
-        </div>
-        <a href="{% url 'logout'%}">Click here to logout.</a>
+        </a>
     </div>
-{% else %}
-    <div class="form">
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.freeimages.com/images/large-previews/7e4/lisbon-tram-1-1447094.jpg)">
+        <a href="" style="color:white;text-decoration:none">
+            Public Transport
+        </a>
     </div>
-{% endif %}
+    <a href="{% url 'logout'%}">Click here to logout.</a>
+</div>
 
 {% endblock content %}
